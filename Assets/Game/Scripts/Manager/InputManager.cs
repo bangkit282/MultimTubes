@@ -54,12 +54,12 @@ namespace MultimTubes
             _playerInputAction.Player.Attack.performed -= OnPlayerAttackPerformed;
         }
 
-        private void OnPlayerAttackPerformed(InputAction.CallbackContext obj)
+        private void OnPlayerJumpPerformed(InputAction.CallbackContext obj)
         {
             OnJumpPerformEvent.Invoke();
         }
 
-        private void OnPlayerJumpPerformed(InputAction.CallbackContext obj)
+        private void OnPlayerAttackPerformed(InputAction.CallbackContext obj)
         {
             OnAttackPerformEvent.Invoke();
         }
