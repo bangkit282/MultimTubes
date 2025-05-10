@@ -26,6 +26,16 @@ namespace MultimTubes
             SubscribeInputEvents();
         }
 
+#if UNITY_EDITOR
+        private void Update()
+        {
+            if (Keyboard.current.enterKey.isPressed)
+            {
+                GameManager.Instance.StartLevel();
+            }
+        }
+#endif
+
         private void OnDisable()
         {
             DisableInput();

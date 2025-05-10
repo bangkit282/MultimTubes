@@ -10,14 +10,25 @@ namespace MultimTubes
         [SerializeField] private float _maxMovementSpeed;
 
         private Rigidbody _rigidbody;
+        private GameManager _gameManager;
 
         private void Awake()
         {
             _rigidbody = GetComponent<Rigidbody>();
         }
 
+        private void Start()
+        {
+            _gameManager = GameManager.Instance;
+        }
+
         private void FixedUpdate()
         {
+            if (_gameManager.IsPlayerHasReachFinishPoint() || !_gameManager.IsLevelHasStarted())
+            {
+                return;
+            }
+
             MovePlayer();
         }
 
