@@ -18,6 +18,11 @@ namespace MultimTubes
         {
             foreach (InventorySlot slot in _inventorySlots)
             {
+                if (slot == null)
+                {
+                    continue;
+                }
+
                 if (slot.IsItemDataEmpty())
                 {
                     slot.gameObject.SetActive(false);

@@ -9,6 +9,9 @@ namespace MultimTubes
         [SerializeField, MMReadOnly] private bool _isLevelStarted;
         [SerializeField, MMReadOnly] private bool _hasReachFinishPoint;
 
+        [Header("Currency")]
+        [SerializeField] private int _coin;
+
         private InputManager _inputManager;
 
         private void Start()
@@ -36,6 +39,12 @@ namespace MultimTubes
             _isLevelStarted = false;
             _hasReachFinishPoint = true;
             _inputManager.DisableInput();
+        }
+
+        public void AddCoin(int coin)
+        {
+            _coin += coin;
+            GameEventManager.OnCoinAddEvent?.Invoke(coin);
         }
     }
 }
