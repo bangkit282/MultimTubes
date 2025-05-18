@@ -52,7 +52,7 @@ namespace MultimTubes
                 {
                     ""name"": """",
                     ""id"": ""5b2c1a12-6529-4d1d-9155-7e6f7d317681"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard"",
@@ -63,18 +63,7 @@ namespace MultimTubes
                 {
                     ""name"": """",
                     ""id"": ""3f478486-78a5-4987-8280-42c20afd00f7"",
-                    ""path"": ""<Keyboard>/leftShift"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard"",
-                    ""action"": ""Attack"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""f34233d8-9ced-4216-b418-1457b520d272"",
-                    ""path"": ""<Keyboard>/rightShift"",
+                    ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard"",
