@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0514c8fd7a54734b8ce80f707fef402, type: 3}
-  m_Name: Bullet
+  m_Name: KeyItem
   m_EditorClassIdentifier: 
-  _itemId: bullet
-  _itemName: Bullet
-  _itemSprite: {fileID: 21300000, guid: 065edb3ee4c6cd245bb288707142b554, type: 3}
+  _itemId: keyItem
+  _itemName: Key Item
+  _itemSprite: {fileID: 21300000, guid: bdd6c77f3b6358b4797992581e75bd64, type: 3}

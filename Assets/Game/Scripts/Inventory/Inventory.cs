@@ -20,6 +20,11 @@ namespace MultimTubes
             GameEventManager.OnInventoryItemRemoveEvent -= RemoveItem;
         }
 
+        public List<ItemSO> GetInventoryItems()
+        {
+            return InventoryItems;
+        }
+
         protected virtual void AddItem(ItemSO item, int quantity)
         {
             for (int i = 0; i < quantity; i++)
