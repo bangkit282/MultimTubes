@@ -10,6 +10,7 @@ namespace MultimTubes
         [Header("Input Events")]
         [SerializeField] private UnityEvent OnJumpPerformEvent;
         [SerializeField] private UnityEvent OnAttackPerformEvent;
+        [SerializeField] private UnityEvent OnConfirmPerformEvent;
 
         private PlayerInputAction _playerInputAction;
 
@@ -52,16 +53,30 @@ namespace MultimTubes
             _playerInputAction.Disable();
         }
 
+        public void EnablePlayerInput()
+        {
+            _playerInputAction.Player.Jump.Enable();
+            _playerInputAction.Player.Attack.Enable();
+        }
+
+        public void DisablePlayerInput()
+        {
+            _playerInputAction.Player.Jump.Disable();
+            _playerInputAction.Player.Attack.Disable();
+        }
+
         private void SubscribeInputEvents()
         {
             _playerInputAction.Player.Jump.performed += OnPlayerJumpPerformed;
             _playerInputAction.Player.Attack.performed += OnPlayerAttackPerformed;
+            _playerInputAction.Player.Confirm.performed += OnPlayerConfirmPerformed;
         }
 
         private void UnsubscribeInputEvents()
         {
             _playerInputAction.Player.Jump.performed -= OnPlayerJumpPerformed;
             _playerInputAction.Player.Attack.performed -= OnPlayerAttackPerformed;
+            _playerInputAction.Player.Confirm.performed -= OnPlayerConfirmPerformed;
         }
 
         private void OnPlayerJumpPerformed(InputAction.CallbackContext obj)
@@ -72,6 +87,11 @@ namespace MultimTubes
         private void OnPlayerAttackPerformed(InputAction.CallbackContext obj)
         {
             OnAttackPerformEvent.Invoke();
+        }
+
+        private void OnPlayerConfirmPerformed(InputAction.CallbackContext obj)
+        {
+            OnConfirmPerformEvent.Invoke();
         }
     }
 }

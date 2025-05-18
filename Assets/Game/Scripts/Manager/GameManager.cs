@@ -44,14 +44,16 @@ namespace MultimTubes
         {
             _isLevelStarted = false;
             _hasReachFinishPoint = true;
-            _inputManager.DisableInput();
+            _inputManager.DisablePlayerInput();
 
             if (_inventory.GetInventoryItems().Contains(_levelData.GetLevelKeyItem()))
             {
+                LevelManager.Instance.TriggerOnKeyItemCollected();
                 Debug.Log($"Key Item Acquired");
             }
             else
             {
+                LevelManager.Instance.TriggerOnKeyItemNotCollected();
                 Debug.Log($"Key Item Not Acquired");
             }
         }
