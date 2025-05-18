@@ -27,6 +27,7 @@ namespace MultimTubes
             if (hitCount > 0)
             {
                 Debug.Log($"Player attack {_overlapResult[0].name}");
+                Destroy(_overlapResult[0].gameObject);
             }
             else
             {
