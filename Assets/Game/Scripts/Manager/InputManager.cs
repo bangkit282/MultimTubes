@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 namespace MultimTubes
 {
-    public class InputManager : MMPersistentSingleton<InputManager>
+    public class InputManager : MMSingleton<InputManager>
     {
         [Header("Input Events")]
         [SerializeField] private UnityEvent OnJumpPerformEvent;
